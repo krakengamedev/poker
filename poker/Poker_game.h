@@ -6,6 +6,7 @@
 
 class PokerGame
 {
+public:
 	Deck m_deck;
 	std::vector<PokerPlayer> m_players;
 	int player_index;
@@ -16,3 +17,6 @@ public:
 
 };
 
+std::string cardTypeToString(CardType l_cardType);
+
+std::string cardSuitToString(CardSuit l_cardSuit);

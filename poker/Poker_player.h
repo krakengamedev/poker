@@ -11,10 +11,12 @@ private:
 	int m_money;
 	std::string m_name;
 public:
+	PokerPlayer(std::string p_name);
 	int betMoney(int p_request);
 	int getMoney();
 	std::vector<CardData*> getHand();
 	bool getFolded();
 	void addCard(CardData* p_card);
+	void printHand();
 };
 

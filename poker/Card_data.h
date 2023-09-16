@@ -42,56 +42,6 @@ enum CardSuit
 	LASTSUIT
 };
 
-std::string cardTypeToString(CardType l_cardType)
-{
-	switch (l_cardType)
-	{
-	case TWO:
-		return "two";
-	case THREE:
-		return "three";
-	case FOUR:
-		return "four";
-	case FIVE:
-		return "five";
-	case SIX:
-		return "six";
-	case SEVEN:
-		return "seven";
-	case EIGHT:
-		return "eight";
-	case NINE:
-		return "nine";
-	case TEN:
-		return "ten";
-	case JACK:
-		return "jack";
-	case QUEEN:
-		return "queen";
-	case KING:
-		return "king";
-	case ACE:
-		return "ace";
-	default:
-		return "invalid card type";
-	}
-}
-
-std::string cardSuitToString(CardSuit l_cardSuit)
-{
-	switch (l_cardSuit)
-	{
-	case HEARTS:
-		return "hearts";
-	case DIAMONDS:
-		return "diamonds";
-	case CLUBS:
-		return "clubs";
-	case SPADES:
-		return "spades";
-	}
-}
-
 struct CardData
 {
 	CardType m_type;

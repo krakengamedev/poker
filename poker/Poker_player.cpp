@@ -1,5 +1,12 @@
 #include "Poker_player.h"
+#include <iostream>
+#include "Poker_game.h"
+#include "Deck.h"
 
+PokerPlayer::PokerPlayer(std::string p_name):
+    m_name(p_name), m_hasFolded(false)
+{
+}
 
 int PokerPlayer::betMoney(int p_request)
 {
@@ -29,4 +36,15 @@ bool PokerPlayer::getFolded()
 void PokerPlayer::addCard(CardData* p_card)
 {
     m_hand.push_back(p_card);
+}
+
+void PokerPlayer::printHand()
+{
+    std::cout << std::endl << std::endl << "Player " << m_name << "'s hand: " << std::endl;
+    for (int i = 0; i < m_hand.size(); i++)
+    {
+        CardData* l_card = m_hand[i];
+        std::cout << "The " << cardTypeToString(l_card->m_type) << " of " << cardSuitToString(l_card->m_suit) << std::endl;
+    }
+    std::cout << valueHand(m_hand) << std::endl;
 }

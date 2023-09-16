@@ -3,12 +3,22 @@
 #include "constants.h"
 #include <iostream>
 #include <vector>
+#include "Poker_game.h"
+#include "Poker_player.h"
 
 int main()
 {
     srand(time(0));
     Deck deck = Deck();
     deck.shuffleDeck();
+
+    PokerGame game;
+    for (int i = 0; i < 4; i++) {
+        game.m_players.push_back(PokerPlayer(std::to_string(i)));
+    }
+
+    game.dealCards(5);
+
     std::vector<CardData*> hand;
 
     sf::RenderWindow window(sf::VideoMode(SCREENWIDTH, SCREENHEIGHT), "Poker");
