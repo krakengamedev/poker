@@ -10,10 +10,11 @@ public:
 	Deck m_deck;
 	std::vector<PokerPlayer> m_players;
 	int player_index;
+	int m_currentBet = 0;
 	
 public:
 	void dealCards(int p_handSize);
-	void bettingRound();
+	void bettingRound(bool first = false);
 	bool checkBet(int currentBet);
 
 };

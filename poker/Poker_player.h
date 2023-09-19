@@ -21,5 +21,6 @@ public:
 	void printHand();
 	int getBet();
 	void resetBet();
+	int playTurn(int currentBet);
 };
 

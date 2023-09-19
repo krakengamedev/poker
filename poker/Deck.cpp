@@ -147,6 +147,8 @@ int valueHand(std::vector<CardData*> p_hand)
 	CardType l_two_pair = checkTwoPair(l_sets);
 	CardType l_high_card = checkSets(l_sets, 1);
 
+	std::cout << "This hand is a ";
+
 	//increment through the hands to find the best one the player has, and value it
 	if (l_longestStraight >= 5 && l_startingCard >= (LASTCARD - l_longestStraight) && l_sameSuitStraight)
 	{
