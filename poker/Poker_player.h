@@ -10,6 +10,7 @@ private:
 	std::vector<CardData*> m_hand;
 	int m_money;
 	std::string m_name;
+	int m_bet;
 public:
 	PokerPlayer(std::string p_name);
 	int betMoney(int p_request);
@@ -18,5 +19,7 @@ public:
 	bool getFolded();
 	void addCard(CardData* p_card);
 	void printHand();
+	int getBet();
+	void resetBet();
 };
 

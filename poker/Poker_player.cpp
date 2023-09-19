@@ -48,3 +48,13 @@ void PokerPlayer::printHand()
     }
     std::cout << valueHand(m_hand) << std::endl;
 }
+
+int PokerPlayer::getBet()
+{
+    return m_bet;
+}
+
+void PokerPlayer::resetBet()
+{
+    m_bet = 0;
+}

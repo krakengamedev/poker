@@ -66,3 +66,15 @@ void PokerGame::dealCards(int p_handSize)
 void PokerGame::bettingRound()
 {
 }
+
+bool PokerGame::checkBet(int currentBet)
+{
+	for (int i = 0; i < m_players.size(); i++)
+	{
+		if (m_players[i].getBet() != currentBet)
+		{
+			return false;
+		}
+	}
+	return true;
+}

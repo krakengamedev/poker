@@ -14,6 +14,7 @@ public:
 public:
 	void dealCards(int p_handSize);
 	void bettingRound();
+	bool checkBet(int currentBet);
 
 };
 
