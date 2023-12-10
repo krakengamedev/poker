@@ -76,13 +76,13 @@ int PokerPlayer::playTurn(int currentBet)
         char ch = input[0];
         while (ch != 'c' && ch != 'r' && ch != 'f')
         {
-            std::cout << "Invalid input, press c to check, r to raise, or f to fold and press enter." << std::endl;
+            std::cout << "Invalid input, press c to call, r to raise, or f to fold and press enter." << std::endl;
             std::cin >> input;
             ch = input[0];
         }
         if (ch == 'c')
         {
-            std::cout << "You check by putting " << currentBet - m_bet << " into the pot." << std::endl;
+            std::cout << "You call by putting " << currentBet - m_bet << " into the pot." << std::endl;
             betMoney(currentBet - m_bet);
             return currentBet;
         }
